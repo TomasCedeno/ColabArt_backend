@@ -116,7 +116,7 @@ io.on("connection", (socket) => {
 
         socket.join(user.room);
 
-/*      //Agregar como colaborador del dibujo
+        //Agregar como colaborador del dibujo
         fs.readFile('rooms.json',(err,data)=>{
             if (err) {
                 console.log("Error no se puede leer el archivo", err);
@@ -137,7 +137,7 @@ io.on("connection", (socket) => {
                     console.log("Ha ocurrido un error al escribir en el archivo", err);
                 }
             })
-        }) */
+        })
 
         socket.emit("message", {
             message: "Bienvenido",
